@@ -697,12 +697,12 @@ select {
   z-index: 50;
 }
 
-.m-2 {
-  margin: 0.5rem;
-}
-
 .m-auto {
   margin: auto;
+}
+
+.m-2 {
+  margin: 0.5rem;
 }
 
 .mx-auto {
@@ -710,12 +710,12 @@ select {
   margin-right: auto;
 }
 
-.mt-1 {
-  margin-top: 0.25rem;
-}
-
 .mt-8 {
   margin-top: 2rem;
+}
+
+.mt-1 {
+  margin-top: 0.25rem;
 }
 
 .block {
@@ -746,18 +746,6 @@ select {
   height: 2.5rem;
 }
 
-.h-screen {
-  height: 100vh;
-}
-
-.h-\[185px\] {
-  height: 185px;
-}
-
-.h-\[1080\] {
-  height: 1080;
-}
-
 .h-\[700px\] {
   height: 700px;
 }
@@ -766,32 +754,12 @@ select {
   min-height: 100vh;
 }
 
-.min-h-\[\] {
-  min-height: ;
-}
-
-.min-h-\[1\] {
-  min-height: 1;
-}
-
-.min-h-\[10\] {
-  min-height: 10;
-}
-
-.min-h-\[108\] {
-  min-height: 108;
-}
-
-.min-h-\[1080\] {
-  min-height: 1080;
-}
-
-.min-h-\[1080p\] {
-  min-height: 1080p;
-}
-
 .min-h-\[1080px\] {
   min-height: 1080px;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .w-fit {
@@ -804,32 +772,8 @@ select {
   width: 2.5rem;
 }
 
-.w-full {
-  width: 100%;
-}
-
-.w-28 {
-  width: 7rem;
-}
-
-.w-44 {
-  width: 11rem;
-}
-
-.w-4 {
-  width: 1rem;
-}
-
 .max-w-screen-2xl {
   max-width: 1536px;
-}
-
-.max-w-md {
-  max-width: 28rem;
-}
-
-.max-w-lg {
-  max-width: 32rem;
 }
 
 .max-w-full {
@@ -847,16 +791,8 @@ select {
           user-select: none;
 }
 
-.grid-cols-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
-}
-
-.flex-row {
-  flex-direction: row;
 }
 
 .flex-col {
@@ -879,10 +815,6 @@ select {
   justify-content: space-between;
 }
 
-.gap-4 {
-  gap: 1rem;
-}
-
 .gap-6 {
   gap: 1.5rem;
 }
@@ -893,20 +825,16 @@ select {
   margin-left: calc(0.25rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
+
 .rounded-full {
   border-radius: 9999px;
 }
 
 .rounded-md {
   border-radius: 0.375rem;
-}
-
-.rounded {
-  border-radius: 0.25rem;
-}
-
-.border {
-  border-width: 1px;
 }
 
 .border-transparent {
@@ -928,16 +856,6 @@ select {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-gray-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
-}
-
-.bg-gray-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(156 163 175 / var(--tw-bg-opacity));
-}
-
 .bg-gray-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(209 213 219 / var(--tw-bg-opacity));
@@ -951,20 +869,8 @@ select {
   fill: #D6AD60;
 }
 
-.fill-\[\#063547\] {
-  fill: #063547;
-}
-
-.p-10 {
-  padding: 2.5rem;
-}
-
 .p-36 {
   padding: 9rem;
-}
-
-.p-4 {
-  padding: 1rem;
 }
 
 .px-4 {
@@ -1010,51 +916,6 @@ select {
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
-}
-
-.py-24 {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-}
-
-.px-44 {
-  padding-left: 11rem;
-  padding-right: 11rem;
-}
-
-.py-1 {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-}
-
-.py-10 {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-}
-
-.py-\[10\] {
-  padding-top: 10;
-  padding-bottom: 10;
-}
-
-.py-\[\] {
-  padding-top: ;
-  padding-bottom: ;
-}
-
-.py-\[2\] {
-  padding-top: 2;
-  padding-bottom: 2;
-}
-
-.py-\[20\] {
-  padding-top: 20;
-  padding-bottom: 20;
-}
-
-.py-\[20p\] {
-  padding-top: 20p;
-  padding-bottom: 20p;
 }
 
 .py-\[20px\] {
@@ -1119,21 +980,52 @@ select {
   color: rgb(6 53 71 / var(--tw-text-opacity));
 }
 
-.text-gray-700 {
-  --tw-text-opacity: 1;
-  color: rgb(55 65 81 / var(--tw-text-opacity));
-}
-
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.ease-in-out {
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+.product-svg {
+  fill: #063547;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@media (min-width: 360px) {
+  .product-svg {
+    height: 150px;
+  }
+}
+
+@media (min-width: 768px) {
+  .product-svg {
+    height: 350px;
+  }
+
+  .product-svg {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+
+.product {
+  margin: auto;
+  display: flex;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .product {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
 
 .rtl-grid {
   direction: rtl;
@@ -1148,32 +1040,9 @@ select {
   color: rgb(214 173 96 / var(--tw-text-opacity));
 }
 
-.focus\:border:focus {
-  border-width: 1px;
-}
-
-.focus\:border-\[\#D6A\]:focus {
-  --tw-border-opacity: 1;
-  border-color: rgb(221 102 170 / var(--tw-border-opacity));
-}
-
-.focus\:border-\[\#D6AD\]:focus {
-  border-color: #D6AD;
-}
-
 .focus\:border-\[\#D6AD60\]:focus {
   --tw-border-opacity: 1;
   border-color: rgb(214 173 96 / var(--tw-border-opacity));
-}
-
-.focus\:border-gray-500:focus {
-  --tw-border-opacity: 1;
-  border-color: rgb(107 114 128 / var(--tw-border-opacity));
-}
-
-.focus\:bg-white:focus {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .focus\:ring-0:focus {
@@ -1183,28 +1052,32 @@ select {
 }
 
 @media (min-width: 360px) {
+  .xxs\:h-\[150px\] {
+    height: 150px;
+  }
+
   .xxs\:h-\[253px\] {
     height: 253px;
   }
 }
 
 @media (min-width: 475px) {
-  .xs\:hidden {
-    display: none;
-  }
-
   .xs\:flex-col {
     flex-direction: column;
+  }
+
+  .xs\:gap-0 {
+    gap: 0px;
   }
 }
 
 @media (min-width: 640px) {
-  .sm\:grid-cols-1 {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
+  .sm\:contents {
+    display: contents;
   }
 
-  .sm\:flex-col {
-    flex-direction: column;
+  .sm\:grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
   .sm\:text-5xl {
@@ -1214,44 +1087,33 @@ select {
 }
 
 @media (min-width: 768px) {
-  .md\:visible {
-    visibility: visible;
-  }
-
   .md\:flex {
     display: flex;
-  }
-
-  .md\:contents {
-    display: contents;
   }
 
   .md\:hidden {
     display: none;
   }
 
+  .md\:h-\[350px\] {
+    height: 350px;
+  }
+
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .md\:flex-row {
-    flex-direction: row;
-  }
-
-  .md\:flex-col {
-    flex-direction: column;
   }
 
   .md\:p-10 {
     padding: 2.5rem;
   }
+
+  .md\:py-20 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
 }
 
 @media (min-width: 1024px) {
-  .lg\:contents {
-    display: contents;
-  }
-
   .lg\:h-\[300px\] {
     height: 300px;
   }
