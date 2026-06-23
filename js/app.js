@@ -1,5 +1,5 @@
 /* الحامدى للخردوات — interactions
-   No dependencies. Mobile menu, scroll reveal, header state, WhatsApp form. */
+   No dependencies. Mobile menu, scroll reveal, scroll-spy, header state, WhatsApp form. */
 (function () {
     "use strict";
 
@@ -45,7 +45,7 @@
     /* ---------- Reveal on scroll ---------- */
     var revealEls = document.querySelectorAll(".reveal");
     if ("IntersectionObserver" in window && revealEls.length) {
-        var observer = new IntersectionObserver(function (entries, obs) {
+        var revealObserver = new IntersectionObserver(function (entries, obs) {
             entries.forEach(function (entry) {
                 if (entry.isIntersecting) {
                     entry.target.classList.add("is-visible");
@@ -54,9 +54,26 @@
             });
         }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
 
-        revealEls.forEach(function (el) { observer.observe(el); });
+        revealEls.forEach(function (el) { revealObserver.observe(el); });
     } else {
         revealEls.forEach(function (el) { el.classList.add("is-visible"); });
+    }
+
+    /* ---------- Scroll-spy: highlight active nav link ---------- */
+    var sections = document.querySelectorAll("main section[id]");
+    var navLinks = document.querySelectorAll(".nav-link");
+    if ("IntersectionObserver" in window && sections.length && navLinks.length) {
+        var spy = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (!entry.isIntersecting) return;
+                var id = entry.target.id;
+                navLinks.forEach(function (link) {
+                    link.classList.toggle("active", link.getAttribute("href") === "#" + id);
+                });
+            });
+        }, { rootMargin: "-45% 0px -50% 0px", threshold: 0 });
+
+        sections.forEach(function (s) { spy.observe(s); });
     }
 
     /* ---------- WhatsApp contact form ---------- */
@@ -70,14 +87,21 @@
             var message = form.querySelector("#message");
             var valid = true;
 
-            [name, phone].forEach(function (field) {
-                if (!field.value.trim()) {
-                    field.classList.add("invalid");
-                    valid = false;
-                } else {
-                    field.classList.remove("invalid");
-                }
-            });
+            if (!name.value.trim()) {
+                name.classList.add("invalid");
+                valid = false;
+            } else {
+                name.classList.remove("invalid");
+            }
+
+            // Phone: keep digits only, require a plausible length (mobile/landline).
+            var phoneDigits = phone.value.replace(/\D/g, "");
+            if (phoneDigits.length < 8) {
+                phone.classList.add("invalid");
+                valid = false;
+            } else {
+                phone.classList.remove("invalid");
+            }
 
             if (!valid) {
                 form.querySelector(".invalid").focus();
@@ -93,8 +117,7 @@
             }
 
             var text = encodeURIComponent(lines.join("\n"));
-            var url = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + text;
-            window.open(url, "_blank", "noopener");
+            window.open("https://wa.me/" + WHATSAPP_NUMBER + "?text=" + text, "_blank", "noopener");
         });
 
         form.querySelectorAll("input, textarea").forEach(function (field) {
