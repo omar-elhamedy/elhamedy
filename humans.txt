@@ -1,0 +1,10 @@
+/* TEAM */
+Owner: Mohamed Elhamedy Haberdashery (محل محمد الحامدى للخردوات)
+Site: https://elhamedy.com/
+Location: El-Mosky, Cairo, Egypt
+Since: 1965
+
+/* SITE */
+Language: Arabic (Egyptian)
+Stack: Static HTML/CSS/JS, GitHub Pages
+Fonts: Cairo (Google Fonts)

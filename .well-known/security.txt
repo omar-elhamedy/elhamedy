@@ -1,0 +1,4 @@
+Contact: https://elhamedy.com/#contact
+Expires: 2027-12-31T23:59:59.000Z
+Preferred-Languages: ar, en
+Canonical: https://elhamedy.com/.well-known/security.txt
